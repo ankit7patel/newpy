@@ -375,10 +375,10 @@ class A:
 class B(A):
     def new(self,x,y):
         print("this is child")
-        super().new(1,2)
+        super().new(2,3 )
 
 obj=B()
-obj.new(54,76  .as_integer_ratio)
+obj.new(54,76 )
 
     
 
