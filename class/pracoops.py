@@ -375,7 +375,7 @@ class A:
 class B(A):
     def new(self,x,y):
         print("this is child")
-        super().new(2,3 )
+        super().new(2,3)
 
 obj=B()
 obj.new(54,76 )
