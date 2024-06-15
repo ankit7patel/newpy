@@ -378,7 +378,7 @@ class B(A):
         super().new(1,2)
 
 obj=B()
-obj.new(54,76)
+obj.new(54,76  .as_integer_ratio)
 
     
 
