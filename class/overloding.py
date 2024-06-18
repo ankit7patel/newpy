@@ -37,31 +37,31 @@ obj.add(11,10,1)
 ############# abstraction --------------->
 
 
-# class Student:
-#     school= "CVP"
+class Student:
+    school= "CVP"
     
-#     def __init__(self,name,age):
-#         self.__name = name
-#         self.__age = age
+    def __init__(self,name,age):
+        self.__name = name
+        self.__age = age
 
-#     def detail(self):
-#         print("name:",self.__name)
-#         print("age:",self.__age)
-#         print("school:", Student.school)
+    def detail(self):
+        print("name:",self.__name)
+        print("age:",self.__age)
+        print("school:", Student.school)
 
-# class Marks(Student):
-#     def Show(self,math,hindi):
-#         self.hindi=hindi
-#         self.math=math
-#     def complete(self):
-#         print("name:",self.__name)
-#         print("age:",self.__age)
-#         print("school:", Student.school)
-#         print("hindi:",self.hindi)
-#         print("math:",self.math )
+class Marks(Student):
+    def Show(self,math,hindi):
+        self.hindi=hindi
+        self.math=math
+    def complete(self):
+        print("name:",self.__name)
+        print("age:",self.__age)
+        print("school:", Student.school)
+        print("hindi:",self.hindi)
+        print("math:",self.math )
 
-# obj = Show("ankuu", 22)
-# obj.__name="Sumit patel"
-# obj.detail()
-# obj.Show(98,86)
-# obj.complete()
+obj = Show("ankuu", 22)
+obj.__name="Sumit patel"
+obj.detail()
+obj.Show(98,86)
+obj.complete()
