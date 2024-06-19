@@ -13,29 +13,7 @@ obj=A()
 obj.add(100,20)
 obj.add(11,10,1)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ############# abstraction --------------->
-
 
 class Student:
     school= "CVP"
