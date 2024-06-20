@@ -325,3 +325,58 @@ class Student:
 obj=Student
 obj.great()
 obj.great1()
+
+
+
+li = [10, 20, 30]
+n = len(li)
+print("The length of list is: ", n)
+
+
+
+
+
+class sbi:
+
+    Head_name ="RBI BANK"
+
+    def detail(self,name,account,ifsc):
+        global Bank_name      
+        Bank_name="SBI"
+
+        self.name=name
+        self.account=account
+        self.ifsc=ifsc
+        print(Bank_name)
+
+class punjab(sbi):
+
+    def m(self):
+
+        self.total_amount= "927139"                                                  ##self se diclear krna pdta hai
+
+class dcb(punjab):
+
+    def user(self, year):
+        self.year=year
+        print("total amount=", self.total_amount)
+
+        self.detail("ankit", 7135071 ,"sbiif0999")                                 # Setting the details using the inherited detail method
+
+        print("this is a punjab bank ")
+        print("head bank=",sbi.Head_name)
+        print("user name=", obj.name)
+        print("user account=",obj.account)
+        print("user ifsc=",self.ifsc)
+        print(Bank_name)
+
+
+class airtl(dcb):
+    def last(self):
+        self.m()
+        self.user(22)
+        print("year of this bank:",self.year)
+        
+obj=airtl()
+obj.last()
+

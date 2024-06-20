@@ -10,6 +10,7 @@ def deco(x):
     return wrapper
 
 def original_fun():
+    
     print("this is original function")
 
 
