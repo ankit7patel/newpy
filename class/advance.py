@@ -1,7 +1,7 @@
-# map()------> (function ,collenction)--->  same logic lgna ho tb  === map me sabi pr same oretion krta hai 
+# map()------> (function ,collenction)--->  same logic lgna ho tb  === map me sabi pr same itretion krta hai 
 
 ################### higher order function ()  ------->>>>>> collection pr kamm krta hai jaha coll. rehta hai heiger order func. ka use krege 
-#folter()----->  filter me total object se kam nikna ho to 
+#filter()----->  filter me total object se kam nikna ho to 
 
 
 
@@ -22,14 +22,14 @@
 # print(my_list)
 
 # def add(n):
-#     return n+5
+#     return n*n
 
 # x=map(add,my_list)
 
 # print(x)
-# # print(tuple(x))
 # print(list(x))
-# # print(type(x))
+# print(list(x))
+# print(type(x))
 
 
 
@@ -64,18 +64,6 @@
 
 
 
-
-# n=input("enter your name:")
-# print(n)
-# def name(i):
-
-#     # m=chr(ord(i)+5)
-#     m =  ord(i)+5
-#     m=chr(m)
-#     return m
-# x=map(name,n)
-# print(x)
-# print(list(x))
 
 
 
@@ -163,12 +151,15 @@
 
 
 # x=lambda name:print("hello i am :", name)
-# # x("Summitttt")
+# x("Summitttt")
+
+
 # m=input("enter name :")
 # x(m)
 
-# y=lambda x,y:x*y
-# print(y(10,20))
+# # y=lambda x,y:x*y
+# # print(y(10,20))
+
 
 
 # y=lambda x,y:x*y
@@ -188,7 +179,7 @@
 # x=list(filter(lambda x : x%2==0 ,my_list))
 # print(x)
 
-# my_list=[2,3,4,5,10]    # even nymber 
+# my_list=[2,3,4,5,10]    # odd nymber 
 # x=list(filter(lambda x : x%2!=0 ,my_list))
 # print(x)
 
@@ -245,7 +236,7 @@
 
 
 
-from functools import reduce
+# from functools import reduce
 
 # my_list=[1,4,23,34,25,6,8,58,86]
 # def min(x,y):
@@ -288,8 +279,7 @@ from functools import reduce
 #     else :
 #         return n * fac(n-1)
 # # m=float(input("enter a num:"))
-# y=fac(5
-#       )
+# y=fac(5)
 # print(y)
 
 
@@ -444,32 +434,32 @@ from functools import reduce
 
 
 # def sqr(num):
-#     for i in range(2,num,2):
-#         return i
-# data = sqr(10)
-# print(data)
+#     for i in range(2,num,6):
+#         print(i)
+# data = sqr(24)
 
 
-def sqr(num):
-    for i in range(1, num + 1):
-        yield i
+# def sqr(num):
+#     for i in range(1, num + 1):
+#         yield i
 
-data=sqr(10)
-print(next(data))
+# data=sqr(10)
+# print(next(data))
 
-for i in data:
-    if i<=4:
-        print(i*5)
+# for i in data:
+#     if i<=4:
+#         print(i*5)
    
-    elif 4<= i <=6:
-
-        
-        print(i*i)
+#     elif 4<=  i <=6:
+#         print(i*i)
     
-    elif 6<= i <=8:
-        print(i-1)
+#     elif 6<= i <=8:
+#         print(i-1)
 
-    elif 8<= i <=10:
-        print(i*50)
-    else:
-        print(i)
+#     elif 8<= i <=10:
+#         print(i*50)
+#     else:
+#         print(i)
+
+
+

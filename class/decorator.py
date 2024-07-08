@@ -3,11 +3,12 @@
 ##   1)  type 
 
 def deco(x):
-    def wrapper():
+    def w():
         print("start")
         x()
         print("end")
-    return wrapper
+        
+    return w
 
 def original_fun():
     
@@ -17,17 +18,47 @@ def original_fun():
 var = deco(original_fun)
 var()
 
-##  2) type
-def decorator(x):
-    def wrapper():
-        print("start")
+# ##  2) type
+# def decorator(x):
+#     def wrapper():
+#         print("start")
+#         x()
+#         print("end")
+#     return wrapper
+
+# @decorator
+# def original_fun():
+#     print("this is original function")
+
+
+# original_fun()
+
+
+def decor(x):
+    def new():
+        print("start code :")
         x()
-        print("end")
-    return wrapper
+        print("end code :")
 
-@decorator
-def original_fun():
-    print("this is original function")
+    return new
+
+def orignal():
+    print("this is a all code :")
+
+runn=decor(orignal)
+runn()
 
 
-original_fun()
+
+def decoo(m):
+    def new():
+        print("--:")
+        m()
+        print("end deco--:")
+
+    return new
+@decoo
+def orignal():
+    print("pura code ___:")
+
+orignal()

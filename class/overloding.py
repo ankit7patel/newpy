@@ -38,7 +38,7 @@ class Marks(Student):
         print("hindi:",self.hindi)
         print("math:",self.math )
 
-obj = Show("ankuu", 22)
+obj = compile("ankuu", 22)
 obj.__name="Sumit patel"
 obj.detail()
 obj.Show(98,86)

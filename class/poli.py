@@ -25,6 +25,8 @@ print(obj.new(10,20,30))
 
 
 
+
+
 from multipledispatch import dispatch
   #3 )  
 class A:

@@ -35,6 +35,7 @@
 #         print(Bank_name)
 
 
+
 # class airtl(dcb):
 #     def last(self):
 #         self.m()
@@ -350,7 +351,6 @@ class sbi:
         print(Bank_name)
 
 class punjab(sbi):
-
     def m(self):
 
         self.total_amount= "927139"                                                  ##self se diclear krna pdta hai
