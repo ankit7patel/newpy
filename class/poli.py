@@ -30,7 +30,7 @@ print(obj.new(10,20,30))
 from multipledispatch import dispatch
   #3 )  
 class A:
-    @dispatch(int ,int)                   ####### ### overloding  class name same rhega para alg alg rhege 
+    @dispatch(int ,int)                   #######  overloding  class name same rhega para alg alg rhege 
     def add(self,x,y):
         print(x+y)
 

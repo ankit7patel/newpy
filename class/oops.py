@@ -375,13 +375,17 @@
 # print('local value of a ',a)                       # print krwa skte hai
 
 
-# class pp:
+class pp:
 
-#     a=500
-#     def new ():
-#         print(pp.a)          ##without const------>class se acces
-# obj=pp
-# pp.new()
+    a=500
+    def new ():
+        global m
+        m=200
+        print(m)
+        print(pp.a)          ##without const------>class se acces
+obj=pp
+pp.new()
+print(m)
 
 #======================methods=========================
 # #metod --------------> instance methods-------------------< 
@@ -439,25 +443,24 @@
 ########################======static method============================>>>
 
 
-# class Student:
-#     @staticmethod      # -> instance method  se cll kr skte hai
+class Student:
+    @staticmethod      # -> instance method  se cll kr skte hai
 
-#     def great():
-#         print("thanks for visit")
+    def great():
+        print("thanks for visit")
         
-      
-      
-#     def great1():
-#         print("welcomw to my webpage")
+    def great1():
+        print("welcomw to my webpage")
        
 
 
-# obj=Student
-# obj.great()
-# obj.name="ankit"   #static variable define 
-# Student.great()
-# obj.great1 () ###() lgne pr isme error aayegi obj ke through cll ni kr skte ku ki isme self ni hai
-# Student.great1()
+obj=Student
+obj.great()
+obj.name="ankit"   #static variable define 
+print(obj.name)
+Student.great()
+obj.great1 () ###() lgne pr isme error aayegi obj ke through cll ni kr skte ku ki isme self ni hai
+Student.great1()
 
 
 ########333================================================> inheri==>

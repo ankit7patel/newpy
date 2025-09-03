@@ -1,12 +1,23 @@
-# 1)
+# # # 1)
+
 # n=int(input("enter a number:"))
 
 # def fac(n):
 #     if (n==1 or n==0):
 #         return  n
-# x=list(map(fac,n))
+# x=list((fac,n))
 # print(x)
 
+# from functools import reduce
+
+# n = int(input("Enter a number: "))
+
+# def fac(x, y):
+#     return x * y
+# numbers = list(range(1, n+1))
+
+# x= reduce(fac, numbers)
+# print(x)
 
 #2)
 # def fac(n):
@@ -19,9 +30,9 @@
 # print(y)
 
 
-#3)
+# #3)
 
-# num=17
+# num=(1,2,3,1,2,42,11,13,17,18,19)
 
 # for i in range(1,num):
 #     if num%i!=0:
@@ -41,7 +52,7 @@
 #         return x
    
 #     else:
-#         return x
+#         return y
     
     
 # def min(m,n):    # min
@@ -51,7 +62,7 @@
 #         return n
     
 # def total(a,b):   # total 
-#     return a-b
+#     return a+b
     
     
 
@@ -124,7 +135,7 @@
 
 # def car(n):
 #     b=ord(n)
-#     return chr(b+2)
+#     return (b+2)
 # x=map(car,name)
 # print((list(x)))
 
@@ -142,10 +153,9 @@
 # def even(n):
 #     if n%2==0:
 #         return n
-# def odd(n):
-#     if n%2!=0:
-#         return n
-    
+#     else :
+#         return False
+
 # x=filter(even,my_list)
 # y=filter(odd,my_list)
 # print(list(x))
@@ -171,6 +181,7 @@
 # a=lambda x,y,z:2*x+5*y+9*z 
 # print(a(10,20,30))
 
+
 # n=lambda name: print("hye i am :",name)
 # n("ankitttt")
 # new=input("enter your second name:")
@@ -193,22 +204,24 @@ print(x)
 
 
 
+# my_list=[10,2,23,5,3,85,38,94]
+# x=reduce(lambda a,b : a if a>b else b  ,my_list)
+# print(x)
+
+
+# my_list=[10,2,23,5,3,85,38,94]
+# x=list(filter(lambda a : a%2==0  ,my_list))
+# print(x)
+
 my_list=[10,2,23,5,3,85,38,94]
-x=reduce(lambda a,b : a if a>b else b  ,my_list)
+x=filter(lambda a :  a if  a%2==0 else False , my_list)
+print(list(x))
+
+my_list=[10,2,23,5,3,85,38,94]
+x=reduce(lambda a,b : a if a>b  else b ,my_list)
 print(x)
 
 
-my_list=[10,2,23,5,3,85,38,94]
-x=list(filter(lambda a : a%2==0  ,my_list))
-print(x)
-
-my_list=[10,2,23,5,3,85,38,94]
-x=list(filter(lambda a : a%2!=0  ,my_list))
-print(x)
-
-my_list=[10,2,23,5,3,85,38,94]
-x=list(map(lambda a : a+10  ,my_list))
-print(x)
 
 
 

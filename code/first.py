@@ -1,3 +1,24 @@
+for i in range(1,11):
+        print(i*6)
+
+i=0
+while i<=20:
+    if i%2==0:
+        print(i)
+    else:
+        print("odd number" ,i)
+    i+=1
+
+
+n=30
+sum=0
+for i in range(2,n):
+    if i%2!=0:
+        sum=sum+i
+        print(i, "total",sum)
+
+
+
 # # n=input("enter your age")
 x=10
 y=20.0
@@ -13,6 +34,8 @@ num = 44
 str_num = int(string)
 sum = num + str_num
 print("Sum: ", sum)
+
+
 
 
 

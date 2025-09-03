@@ -28,8 +28,8 @@ obj.m3()
 
 #     def detail(self,name,account,ifsc):
 #         global Bank_name       # local varibale ko
-#         Bank_name="SBI"
 
+#         Bank_name="SBI"
 #         self.name=name
 #         self.account=account
 #         self.ifsc=ifsc
@@ -94,11 +94,12 @@ obj=dcb()
 obj.user()
 
 ###########     2)
+
 class sbi:
     Head_name ="RBI BANK"
-
     def detail(self,name,account,ifsc):
-        global Bank_name      
+        global Bank_name
+
         Bank_name="SBI"
 
         self.name=name
@@ -108,7 +109,8 @@ class sbi:
 
 class punjab(sbi):
 
-    def m(self):
+    def m(self,age):
+        self.age=age
 
         self.total_amount= "927139"                                                  ##self se diclear krna pdta hai
 
@@ -116,6 +118,7 @@ class dcb(punjab):
 
     def user(self, year):
         self.year=year
+        print(self.age)
         print("total amount=", self.total_amount)
 
         self.detail("ankit", 7135071 ,"sbiif0999")                                 # Setting the details using the inherited detail method
@@ -130,7 +133,7 @@ class dcb(punjab):
 
 class airtl(dcb):
     def last(self):
-        self.m()
+        self.m(90)
         self.user(22)
         print("year of this bank:",self.year)
         
@@ -168,7 +171,7 @@ class key(ad,ankit):   ##(MRO)--> LEFT to right value leta hai
         self.room1()
         self.room2()
 
-        # super().room()   #### dono method ko cl krega     
+        super() #### dono method ko cl krega     
 
 obj=key()
 obj.lock()
@@ -249,6 +252,9 @@ obj.lock()
 
   ### multipal 
 
+
+
+
 # class p1:
 #     def m1(self):
 #         print("p1 acces ")
@@ -294,6 +300,7 @@ obj.lock()
 
 
 ############# queestion  super () methods hai ---------------------->
+
 
 
 

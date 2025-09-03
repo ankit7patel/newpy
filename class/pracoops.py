@@ -2,7 +2,7 @@
 
 # class sbi:
 
-#     Head_name ="RBI BANK"
+#     _Head_name_ ="RBI BANK"
 
 #     def detail(self,name,account,ifsc):
 #         global Bank_name      

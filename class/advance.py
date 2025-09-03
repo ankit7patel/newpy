@@ -146,7 +146,7 @@
 
 
 
-# ==============================lambda function ===> asa function jiska koinamm ni  h isko ek baar use krte hai
+# ==============================lambda function ===> asa function jiska koi namm ni  h isko ek baar use krte hai
 
 
 
