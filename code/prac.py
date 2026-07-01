@@ -14,7 +14,6 @@ class solution:
                 ans.append(str(i))
         return ans  
         
-
         
 # n= int(input("num"))
 # i=1

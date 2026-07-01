@@ -70,7 +70,7 @@ input("enter adderes age ")
 input("enter your batch ")
 
 
-num6=input()
+num6=input()S
 num3=float(input("enter no:"))
 num4=int(input("enter no:"))
 num5=int(input("enter no:"))
@@ -80,7 +80,7 @@ num_6=float(num6)
 total_sum=num3+num4+num5+num_6
 print("total of num:", total_sum)
 
-P=float(input("enter no of P  :"))
+P=float(input("enter no of P  :")
 R=float(input("enter no of R:"))
 T=float(input("enter no  of T:"))
 
