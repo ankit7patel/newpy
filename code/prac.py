@@ -1,16 +1,21 @@
-n= int(input("num"))
-i=1
-sum=0
-while i<=n:
-    if i<n:
-          print(i,end="+")
-    else :
-         print(i,end="=")
-    sum=sum+i
-    i+=1
-print(sum)
+from typing import List
 
+class solution:
+    def fizzBuss(self,n:int) -> List[str]:
+        ans  =[]
+        for i in range(1,n+1):
+            if i%5==0:
+                ans.append("fizz")
+            elif i%3==0:
+                ans.append("buzz")
+            elif i%3==0 and i%5==0:
+                ans.appned("fizzbuss")
+            else:
+                ans.append(str(i))
+        return ans  
+        
 
+        
 # n= int(input("num"))
 # i=1
 # sum=0
@@ -387,6 +392,8 @@ print(sum)
 
 
 
+
+
 # st="Ankittt"
 # # print(str)
 # new_str=st.swapcase
@@ -419,5 +426,17 @@ print(sum)
 
 # print(list(range(11,1,-1)))
 # print(list(range(5)))
+
+
+
+
+
+
+
+
+
+
+
+
 
 
