@@ -192,7 +192,7 @@ for i in list:
         count+=1
 print(count)
 
- """
+
 # armstrong number
 num=int(input("number :")) 
 total=0
@@ -207,3 +207,131 @@ else:
     print("NOT armstong")
 
 
+##  subrting of size three with distinct char
+
+s="xyzzazb"
+n=len(s)
+ans=0
+
+for i in range(1,n-2):
+    if s[i]!=s[i+1] and s[i+1]!=s[i+2] and s[i+2]!=s[i]:
+        ans+=1
+print(ans)
+
+
+
+#frequency count 
+
+arr=[1,1,2,3,4,3,2,1,5,7,8,7,6,5,6,8,2,8,3,6]
+num=0
+freq={}
+for i in arr:
+    freq[i]=freq.get(i,0)+1
+
+print(freq)
+
+
+#unique element
+
+arr=[134,5,5,5,417,17,8148,458,588,134,588,17,74,88,88]
+dict={}
+ #arr.set()
+print(tuple(arr))
+print(set(arr))
+
+
+
+
+lst=["apple","banna","mango"]
+d={}
+for i in range(len(lst)):
+    d[i]=lst[i]
+
+print(d)
+
+
+
+### dictaionary
+d1={}
+
+d1["name"]="vishu"
+d1["age"]=24
+d1["city"]="delhi"
+d1["course"]="MCA"
+
+print(d1["name"])
+print(d1.keys())
+
+print(d1.items())
+
+for key,value in d1.items():
+    print(key,value )
+
+print(dict(d1))
+
+
+
+
+
+d1={'name': 'vishu', 
+    'age': 24,
+      'city': 'delhi',
+        'course': 'MCA'
+}
+
+d1["city"]="pune"
+print(d1["city"])
+print(d1.values())
+
+
+
+
+# update 1
+d1_new={"laptop":"Lenovo",
+        "ram":"16GB"
+}
+d1.update(d1_new)
+print(d1)
+#2
+
+d1.update({"rollnum":"1632"})
+print(d1)
+
+
+
+lst=[12,32,12,47,31,61,43,22,74,31,90]
+even=[]
+for i in lst:
+    if i%2==0:
+        even.append(i)
+print(even)
+
+lst=[12,32,12,47,31,61,43,22,74,31,90]
+list=[]
+for i in lst:
+    if i%2==0:  
+        print(i,end=" ,")
+
+
+lst=[12,32,12,47,31,61,43,22,74,31,90]
+lst.sort(reverse=True)
+print(lst)
+
+ """
+
+lst=[12,32,12,47,31,61,43,22,74,31,90]
+maxm=lst[0]
+minm=lst[0]
+
+for i in lst:
+    if i > maxm:
+        maxm = i
+
+    if i < minm:
+        minm = i
+print(maxm)
+print(minm)
+
+
+
+  
