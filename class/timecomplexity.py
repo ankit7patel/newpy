@@ -246,28 +246,167 @@ print(odd)
 
 #amstrong number 
 
-nums = [10, 15, 22, 31, 40, 55, 61] 
+# nums = [10, 15, 22, 31, 40, 55, 61] 
 
-even = []
-sum=0
-for num in nums:
-    if num % 2 == 0:
-        even.append(num)
-        sum+=num
+# even = []
+# sum=0
+# for num in nums:
+#     if num % 2 == 0:
+#         even.append(num)
+#         sum+=num
 
-print(even , "sum of number : ", sum , end="\n")
+# print(even , "sum of number : ", sum , end="\n")
 
-num = int(input("Enter a number: "))
+# num = int(input("Enter a number: "))
 
-temp = num
-sum = 0
+# temp = num
+# sum = 0
 
-while temp > 0:
-    digit = temp % 10
-    sum = sum + digit ** 3
-    temp = temp // 10
+# while temp > 0:
+#     digit = temp % 10
+#     sum = sum + digit ** 3
+#     temp = temp // 10
 
-if sum == num:
-    print(num, "is an Armstrong Number")
-else:
-    print(num, "is not an Armstrong Number")
+# if sum == num:
+#     print(num, "is an Armstrong Number")
+# else:
+#     print(num, "is not an Armstrong Number")
+
+
+
+# class Student:
+#     Stu_quelification="MBA"
+#     Stu_college="MvM"
+
+#     def __init__(self,name,age):
+#         self.name=name
+#         self.age=age
+#         print("constrator")
+#         print("college=",Student.Stu_college)
+#         print("name=",name , "age=",age)
+        
+
+# obj=Student("ankuuuuu",24)
+# print(obj)
+
+
+
+
+
+
+
+# ### 3  question
+
+# class Student:
+#     " string doc "     
+#     Stu_qualification="MBA"
+#     Stu_college="MBM" 
+
+
+#     def Stu_details(self,name,age):    
+#          print("qualification=",Student.Stu_qualification)
+#          print("college=",Student.Stu_college)
+#          print("Stuname=",name)
+#          print("Stu_age=",age)
+         
+    
+# obj=Student()         
+# print(obj.__doc__)        
+# obj.Stu_details('ankit',22)   
+
+
+
+
+
+# class Student:
+   
+#    "string testing" 
+#    college="ccb" 
+   
+#    def __init__(self,name,age):   
+#       self.name=name               
+#       self.age=age
+      
+
+#    def display(self):
+#       print(self.name)
+#       print(self.age)
+
+
+# obj=Student("ankit",22) 
+# obj.name         
+# obj.display()
+# print(Student.college)
+# print(obj.__doc__)                
+# # print(dir(obj))                       
+# print(obj.__dict__)                
+# # print(obj.name)
+# # print(obj.age)
+
+# print("second obj")
+
+# Sumit=Student("Sumit",21)         
+# # Sumit.display()                 
+# print(Sumit.__dict__)
+# print(Sumit.name)                  
+# print(Sumit.age)
+
+
+
+
+
+# class Mobile:
+#     modal_num="note 9 pro max"
+
+    
+
+#     def __init__(self,emi,color,addres):
+#         self.emi=emi
+#         self.color=color
+#         self.addres=addres
+
+#     def locall(self):
+#         print(self.emi)                 
+#         print(Mobile.modal_num)  
+#         print(Mobile.color)   
+
+
+# obj=Mobile("12345678","blur","ip6")
+# print(obj.emi)    
+# print(obj.color)
+# print(obj.addres)
+# print(obj.__dict__)
+# # obj.locall()
+# print(obj.locall)
+
+
+
+
+
+
+class Mobile:
+
+    modal_num="note 9 pro max"       
+
+    def __init__(self,emi): 
+        self.emi=emi                
+        print(id(self.emi))         
+        
+        
+
+    def locall(self,model):
+        global color                
+        color="blue"                
+        print("emi_num=",self.emi)
+        print("color=",color)
+        print("modal_num=",Mobile.modal_num)
+        self.model=model
+    def col(self):
+        print("local variable ",color)   
+        print(self.model)   
+    
+    
+obj=Mobile("12345678")
+obj.locall("iphone14")
+obj.col()
+# print(obj.model)
