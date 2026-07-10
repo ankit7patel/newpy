@@ -384,29 +384,166 @@ print(odd)
 
 
 
-class Mobile:
+# class Mobile:
 
-    modal_num="note 9 pro max"       
+#     modal_num="note 9 pro max"       
 
-    def __init__(self,emi): 
-        self.emi=emi                
-        print(id(self.emi))         
+#     def __init__(self,emi): 
+#         self.emi=emi                
+#         print(id(self.emi))         
         
         
 
-    def locall(self,model):
-        global color                
-        color="blue"                
-        print("emi_num=",self.emi)
-        print("color=",color)
-        print("modal_num=",Mobile.modal_num)
-        self.model=model
-    def col(self):
-        print("local variable ",color)   
-        print(self.model)   
+#     def locall(self,model):
+#         global color                
+#         color="blue"                
+#         print("emi_num=",self.emi)
+#         print("color=",color)
+#         print("modal_num=",Mobile.modal_num)
+#         self.model=model
+#     def col(self):
+#         print("local variable ",color)   
+#         print(self.model)   
     
     
-obj=Mobile("12345678")
-obj.locall("iphone14")
-obj.col()
-# print(obj.model)
+# obj=Mobile("12345678")
+# obj.locall("iphone14")
+# obj.col()
+# # print(obj.model)
+
+
+
+
+
+class Student:
+
+    # Class Attribute (Static Variable)
+    college = "Career College Bhopal"
+
+    def __init__(self, name, age, course):
+        # Instance Variables
+        self.name = name
+        self.age = age
+        self.course = course
+
+    def display(self):
+        # Local Variable
+        message = "Student Details"
+
+        print(message)
+        print("Name :", self.name)
+        print("Age :", self.age)
+        print("Course :", self.course)
+        print("College :", Student.college)
+        print()
+
+    @classmethod
+    def change_college(cls, new_college):
+        cls.college = new_college
+
+    @staticmethod
+    def welcome():
+        print("Welcome to Python OOP")
+        print()
+
+# Object Creation
+s1 = Student("Ankit", 22, "BCA")
+s2 = Student("Rahul", 21, "BSc")
+
+# Static Method
+Student.welcome()
+
+# Instance Method
+s1.display()
+s2.display()
+
+# Class Method
+Student.change_college("LNCT College")
+
+print("After Changing College")
+print()
+
+s1.display()
+s2.display()
+
+
+
+
+
+
+class Person:
+
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def show(self):
+        print("Name :", self.name)
+        print("Age :", self.age)
+
+
+class Student(Person):
+
+    def __init__(self, name, age, course):
+        super().__init__(name, age)
+        self.course = course
+
+    def display(self):
+        self.show()
+        print("Course :", self.course)
+
+
+# Object
+s1 = Student("Ankit", 22, "Python Full Stack")
+s1.display()
+
+
+
+class Animal:
+
+    def sound(self):
+        print("Animal makes a sound")
+
+
+class Dog(Animal):
+
+    def sound(self):
+        print("Dog barks: Woof Woof")
+
+
+class Cat(Animal):
+
+    def sound(self):
+        print("Cat meows: Meow Meow")
+
+
+class Cow(Animal):
+
+    def sound(self):
+        print("Cow says: Moo Moo")
+
+
+class Lion(Animal):
+
+    def sound(self):
+        print("Lion roars: Roar Roar")
+
+
+# Polymorphism Function
+def animal_sound(animal):
+    animal.sound()
+
+
+# Object Creation
+d = Dog()
+c = Cat()
+cw = Cow()
+l = Lion()
+
+animals = [d, c, cw, l]
+
+print("Animal Sounds")
+print("----------------")
+
+for animal in animals:
+    animal_sound(animal)
