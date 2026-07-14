@@ -415,135 +415,294 @@ print(odd)
 
 
 
-class Student:
+# class Student:
 
-    # Class Attribute (Static Variable)
-    college = "Career College Bhopal"
+#     # Class Attribute (Static Variable)
+#     college = "Career College Bhopal"
 
-    def __init__(self, name, age, course):
-        # Instance Variables
-        self.name = name
-        self.age = age
-        self.course = course
+#     def __init__(self, name, age, course):
+#         # Instance Variables
+#         self.name = name
+#         self.age = age
+#         self.course = course
 
-    def display(self):
-        # Local Variable
-        message = "Student Details"
+#     def display(self):
+#         # Local Variable
+#         message = "Student Details"
 
-        print(message)
-        print("Name :", self.name)
-        print("Age :", self.age)
-        print("Course :", self.course)
-        print("College :", Student.college)
-        print()
+#         print(message)
+#         print("Name :", self.name)
+#         print("Age :", self.age)
+#         print("Course :", self.course)
+#         print("College :", Student.college)
+#         print()
 
-    @classmethod
-    def change_college(cls, new_college):
-        cls.college = new_college
+#     @classmethod
+#     def change_college(cls, new_college):
+#         cls.college = new_college
 
-    @staticmethod
-    def welcome():
-        print("Welcome to Python OOP")
-        print()
+#     @staticmethod
+#     def welcome():
+#         print("Welcome to Python OOP")
+#         print()
 
-# Object Creation
-s1 = Student("Ankit", 22, "BCA")
-s2 = Student("Rahul", 21, "BSc")
+# # Object Creation
+# s1 = Student("Ankit", 22, "BCA")
+# s2 = Student("Rahul", 21, "BSc")
 
-# Static Method
-Student.welcome()
+# # Static Method
+# Student.welcome()
 
-# Instance Method
-s1.display()
-s2.display()
+# # Instance Method
+# s1.display()
+# s2.display()
 
-# Class Method
-Student.change_college("LNCT College")
+# # Class Method
+# Student.change_college("LNCT College")
 
-print("After Changing College")
-print()
+# print("After Changing College")
+# print()
 
-s1.display()
-s2.display()
-
-
+# s1.display()
+# s2.display()
 
 
 
 
-class Person:
-
-    def __init__(self, name, age):
-        self.name = name
-        self.age = age
-
-    def show(self):
-        print("Name :", self.name)
-        print("Age :", self.age)
 
 
-class Student(Person):
+# class Person:
 
-    def __init__(self, name, age, course):
-        super().__init__(name, age)
-        self.course = course
+#     def __init__(self, name, age):
+#         self.name = name
+#         self.age = age
 
-    def display(self):
-        self.show()
-        print("Course :", self.course)
-
-
-# Object
-s1 = Student("Ankit", 22, "Python Full Stack")
-s1.display()
+#     def show(self):
+#         print("Name :", self.name)
+#         print("Age :", self.age)
 
 
+# class Student(Person):
 
-class Animal:
+#     def __init__(self, name, age, course):
+#         super().__init__(name, age)
+#         self.course = course
 
-    def sound(self):
-        print("Animal makes a sound")
-
-
-class Dog(Animal):
-
-    def sound(self):
-        print("Dog barks: Woof Woof")
+#     def display(self):
+#         self.show()
+#         print("Course :", self.course)
 
 
-class Cat(Animal):
-
-    def sound(self):
-        print("Cat meows: Meow Meow")
-
-
-class Cow(Animal):
-
-    def sound(self):
-        print("Cow says: Moo Moo")
+# # Object
+# s1 = Student("Ankit", 22, "Python Full Stack")
+# s1.display()
 
 
-class Lion(Animal):
 
-    def sound(self):
-        print("Lion roars: Roar Roar")
+# class Animal:
 
-
-# Polymorphism Function
-def animal_sound(animal):
-    animal.sound()
+#     def sound(self):
+#         print("Animal makes a sound")
 
 
-# Object Creation
-d = Dog()
-c = Cat()
-cw = Cow()
-l = Lion()
+# class Dog(Animal):
 
-animals = [d, c, cw, l]
+#     def sound(self):
+#         print("Dog barks: Woof Woof")
 
-print("Animal Sounds")
-print("----------------")
 
-for animal in animals:
-    animal_sound(animal)
+# class Cat(Animal):
+
+#     def sound(self):
+#         print("Cat meows: Meow Meow")
+
+
+# class Cow(Animal):
+
+#     def sound(self):
+#         print("Cow says: Moo Moo")
+
+
+# class Lion(Animal):
+
+#     def sound(self):
+#         print("Lion roars: Roar Roar")
+
+
+# # Polymorphism Function
+# def animal_sound(animal):
+#     animal.sound()
+
+
+# # Object Creation
+# d = Dog()
+# c = Cat()
+# cw = Cow()
+# l = Lion()
+
+# animals = [d, c, cw, l]
+
+# print("Animal Sounds")
+# print("----------------")
+
+# for animal in animals:
+#     animal_sound(animal)
+
+
+
+
+# Calculator Project in Python  ---------- 
+
+# def add(a, b):
+#     return a + b
+
+# def subtract(a, b):
+#     return a - b
+
+# def multiply(a, b):
+#     return a * b
+
+# def divide(a, b):
+#     if b == 0:
+#         return "Error! Division by zero is not allowed."
+#     return a / b
+
+
+# while True:
+#     print("\n====== CALCULATOR ======")
+#     print("1. Addition")
+#     print("2. Subtraction")
+#     print("3. Multiplication")
+#     print("4. Division")
+#     print("5. Exit")
+
+#     choice = input("Enter your choice (1-5): ")
+
+#     if choice == "5":
+#         print("Thank you for using Calculator.")
+#         break
+
+#     if choice in ["1", "2", "3", "4"]:
+#         try:
+#             num1 = float(input("Enter First Number: "))
+#             num2 = float(input("Enter Second Number: "))
+
+#             if choice == "1":
+#                 print("Result =", add(num1, num2))
+
+#             elif choice == "2":
+#                 print("Result =", subtract(num1, num2))
+
+#             elif choice == "3":
+#                 print("Result =", multiply(num1, num2))
+
+#             elif choice == "4":
+#                 print("Result =", divide(num1, num2))
+
+#         except ValueError:
+#             print("Please enter valid numbers.")
+
+#     else:
+#         print("Invalid Choice! Please select between 1 to 5.")
+
+
+
+
+
+
+
+
+
+# -------------------------------
+# Shopping Billing System
+# -------------------------------
+
+products = {
+    1: ("Rice", 60),
+    2: ("Sugar", 45),
+    3: ("Milk", 30),
+    4: ("Bread", 40),
+    5: ("Oil", 150),
+    6: ("Soap", 35),
+    7: ("Tea", 120),
+    8: ("Coffee", 250)
+}
+
+cart = []
+
+print("=" * 40)
+print("      SHOPPING BILL SYSTEM")
+print("=" * 40)
+
+customer = input("Enter Customer Name: ")
+
+while True:
+
+    print("\nAvailable Products")
+    print("-" * 40)
+
+    for key, value in products.items():
+        print(f"{key}. {value[0]} - Rs.{value[1]}")
+
+    try:
+        item = int(input("\nEnter Product Number: "))
+
+        if item not in products:
+            print("Invalid Product!")
+            continue
+
+        qty = int(input("Enter Quantity: "))
+
+        name = products[item][0]
+        price = products[item][1]
+        total = price * qty
+
+        cart.append([name, price, qty, total])
+
+        choice = input("Add More Items? (yes/no): ").lower()
+
+        if choice == "no":
+            break
+
+    except ValueError:
+        print("Please Enter Valid Number!")
+
+print("\n")
+print("=" * 50)
+print("             FINAL BILL")
+print("=" * 50)
+
+print("Customer Name :", customer)
+print("-" * 50)
+print("{:<15}{:<10}{:<10}{:<10}".format(
+    "Product", "Price", "Qty", "Total"))
+print("-" * 50)
+
+grand_total = 0
+
+for item in cart:
+    print("{:<15}{:<10}{:<10}{:<10}".format(
+        item[0], item[1], item[2], item[3]))
+    grand_total += item[3]
+
+print("-" * 50)
+
+discount = 0
+
+if grand_total >= 1000:
+    discount = grand_total * 0.10
+    print("Discount (10%) : Rs.", discount)
+
+final_amount = grand_total - discount
+
+gst = final_amount * 0.05
+
+net_amount = final_amount + gst
+
+print("Subtotal       : Rs.", grand_total)
+print("GST (5%)       : Rs.", round(gst, 2))
+print("Payable Amount : Rs.", round(net_amount, 2))
+
+print("=" * 50)
+print("   Thank You For Shopping!")
+print("=" * 50)
