@@ -617,92 +617,182 @@ print(odd)
 # Shopping Billing System
 # -------------------------------
 
-products = {
-    1: ("Rice", 60),
-    2: ("Sugar", 45),
-    3: ("Milk", 30),
-    4: ("Bread", 40),
-    5: ("Oil", 150),
-    6: ("Soap", 35),
-    7: ("Tea", 120),
-    8: ("Coffee", 250)
-}
+# products = {
+#     1: ("Rice", 60),
+#     2: ("Sugar", 45),
+#     3: ("Milk", 30),
+#     4: ("Bread", 40),
+#     5: ("Oil", 150),
+#     6: ("Soap", 35),
+#     7: ("Tea", 120),
+#     8: ("Coffee", 250)
+# }
 
-cart = []
+# cart = []
 
-print("=" * 40)
-print("      SHOPPING BILL SYSTEM")
-print("=" * 40)
+# print("=" * 40)
+# print("      SHOPPING BILL SYSTEM")
+# print("=" * 40)
 
-customer = input("Enter Customer Name: ")
+# customer = input("Enter Customer Name: ")
 
-while True:
+# while True:
 
-    print("\nAvailable Products")
-    print("-" * 40)
+#     print("\nAvailable Products")
+#     print("-" * 40)
 
-    for key, value in products.items():
-        print(f"{key}. {value[0]} - Rs.{value[1]}")
+#     for key, value in products.items():
+#         print(f"{key}. {value[0]} - Rs.{value[1]}")
 
-    try:
-        item = int(input("\nEnter Product Number: "))
+#     try:
+#         item = int(input("\nEnter Product Number: "))
 
-        if item not in products:
-            print("Invalid Product!")
-            continue
+#         if item not in products:
+#             print("Invalid Product!")
+#             continue
 
-        qty = int(input("Enter Quantity: "))
+#         qty = int(input("Enter Quantity: "))
 
-        name = products[item][0]
-        price = products[item][1]
-        total = price * qty
+#         name = products[item][0]
+#         price = products[item][1]
+#         total = price * qty
 
-        cart.append([name, price, qty, total])
+#         cart.append([name, price, qty, total])
 
-        choice = input("Add More Items? (yes/no): ").lower()
+#         choice = input("Add More Items? (yes/no): ").lower()
 
-        if choice == "no":
-            break
+#         if choice == "no":
+#             break
 
-    except ValueError:
-        print("Please Enter Valid Number!")
+#     except ValueError:
+#         print("Please Enter Valid Number!")
 
-print("\n")
-print("=" * 50)
-print("             FINAL BILL")
-print("=" * 50)
+# print("\n")
+# print("=" * 50)
+# print("             FINAL BILL")
+# print("=" * 50)
 
-print("Customer Name :", customer)
-print("-" * 50)
-print("{:<15}{:<10}{:<10}{:<10}".format(
-    "Product", "Price", "Qty", "Total"))
-print("-" * 50)
+# print("Customer Name :", customer)
+# print("-" * 50)
+# print("{:<15}{:<10}{:<10}{:<10}".format(
+#     "Product", "Price", "Qty", "Total"))
+# print("-" * 50)
 
-grand_total = 0
+# grand_total = 0
 
-for item in cart:
-    print("{:<15}{:<10}{:<10}{:<10}".format(
-        item[0], item[1], item[2], item[3]))
-    grand_total += item[3]
+# for item in cart:
+#     print("{:<15}{:<10}{:<10}{:<10}".format(
+#         item[0], item[1], item[2], item[3]))
+#     grand_total += item[3]
 
-print("-" * 50)
+# print("-" * 50)
 
-discount = 0
+# discount = 0
 
-if grand_total >= 1000:
-    discount = grand_total * 0.10
-    print("Discount (10%) : Rs.", discount)
+# if grand_total >= 1000:
+#     discount = grand_total * 0.10
+#     print("Discount (10%) : Rs.", discount)
 
-final_amount = grand_total - discount
+# final_amount = grand_total - discount
 
-gst = final_amount * 0.05
+# gst = final_amount * 0.05
 
-net_amount = final_amount + gst
+# net_amount = final_amount + gst
 
-print("Subtotal       : Rs.", grand_total)
-print("GST (5%)       : Rs.", round(gst, 2))
-print("Payable Amount : Rs.", round(net_amount, 2))
+# print("Subtotal       : Rs.", grand_total)
+# print("GST (5%)       : Rs.", round(gst, 2))
+# print("Payable Amount : Rs.", round(net_amount, 2))
 
-print("=" * 50)
-print("   Thank You For Shopping!")
-print("=" * 50)
+# print("=" * 50)
+# print("   Thank You For Shopping!")
+# print("=" * 50)
+
+
+
+
+
+
+
+
+
+
+
+import tkinter as tk
+
+# Window
+root = tk.Tk()
+root.title("Snake Movement")
+root.geometry("600x400")
+
+canvas = tk.Canvas(root, width=600, height=400, bg="black")
+canvas.pack()
+
+# Snake Starting Position
+snake = [(100, 100), (80, 100), (60, 100)]
+size = 20
+
+direction = "Right"
+
+# Draw Snake
+def draw_snake():
+    canvas.delete("snake")
+
+    for x, y in snake:
+        canvas.create_rectangle(
+            x, y,
+            x + size, y + size,
+            fill="green",
+            tags="snake"
+        )
+
+# Move Snake
+def move():
+
+    global snake
+
+    head_x, head_y = snake[0]
+
+    if direction == "Right":
+        head_x += size
+
+    elif direction == "Left":
+        head_x -= size
+
+    elif direction == "Up":
+        head_y -= size
+
+    elif direction == "Down":
+        head_y += size
+
+    new_head = (head_x, head_y)
+
+    snake.insert(0, new_head)
+    snake.pop()
+
+    draw_snake()
+
+    root.after(150, move)
+
+# Keyboard Control
+def change_direction(event):
+
+    global direction
+
+    if event.keysym == "Right":
+        direction = "Right"
+
+    elif event.keysym == "Left":
+        direction = "Left"
+
+    elif event.keysym == "Up":
+        direction = "Up"
+
+    elif event.keysym == "Down":
+        direction = "Down"
+
+root.bind("<Key>", change_direction)
+
+draw_snake()
+move()
+
+root.mainloop()
