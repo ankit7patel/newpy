@@ -714,85 +714,198 @@ print(odd)
 
 
 
+# snake Game  --------------
 
 
 
-import tkinter as tk
+ 
+# import tkinter as tk
 
-# Window
-root = tk.Tk()
-root.title("Snake Movement")
-root.geometry("600x400")
+# # Window
+# root = tk.Tk()
+# root.title("Snake Movement")
+# root.geometry("600x400")
 
-canvas = tk.Canvas(root, width=600, height=400, bg="black")
-canvas.pack()
+# canvas = tk.Canvas(root, width=600, height=400, bg="black")
+# canvas.pack()
 
-# Snake Starting Position
-snake = [(100, 100), (80, 100), (60, 100)]
-size = 20
+# # Snake Starting Position
+# snake = [(100, 100), (80, 100), (60, 100)]
+# size = 20
 
-direction = "Right"
+# direction = "Right"
 
-# Draw Snake
-def draw_snake():
-    canvas.delete("snake")
+# # Draw Snake
+# def draw_snake():
+#     canvas.delete("snake")
 
-    for x, y in snake:
-        canvas.create_rectangle(
-            x, y,
-            x + size, y + size,
-            fill="green",
-            tags="snake"
-        )
+#     for x, y in snake:
+#         canvas.create_rectangle(
+#             x, y,
+#             x + size, y + size,
+#             fill="green",
+#             tags="snake"
+#         )
 
-# Move Snake
-def move():
+# # Move Snake
+# def move():
 
-    global snake
+#     global snake
 
-    head_x, head_y = snake[0]
+#     head_x, head_y = snake[0]
 
-    if direction == "Right":
-        head_x += size
+#     if direction == "Right":
+#         head_x += size
 
-    elif direction == "Left":
-        head_x -= size
+#     elif direction == "Left":
+#         head_x -= size
 
-    elif direction == "Up":
-        head_y -= size
+#     elif direction == "Up":
+#         head_y -= size
 
-    elif direction == "Down":
-        head_y += size
+#     elif direction == "Down":
+#         head_y += size
 
-    new_head = (head_x, head_y)
+#     new_head = (head_x, head_y)
 
-    snake.insert(0, new_head)
-    snake.pop()
+#     snake.insert(0, new_head)
+#     snake.pop()
 
-    draw_snake()
+#     draw_snake()
 
-    root.after(150, move)
+#     root.after(150, move)
 
-# Keyboard Control
-def change_direction(event):
+# # Keyboard Control
+# def change_direction(event):
 
-    global direction
+#     global direction
 
-    if event.keysym == "Right":
-        direction = "Right"
+#     if event.keysym == "Right":
+#         direction = "Right"
 
-    elif event.keysym == "Left":
-        direction = "Left"
+#     elif event.keysym == "Left":
+#         direction = "Left"
 
-    elif event.keysym == "Up":
-        direction = "Up"
+#     elif event.keysym == "Up":
+#         direction = "Up"
 
-    elif event.keysym == "Down":
-        direction = "Down"
+#     elif event.keysym == "Down":
+#         direction = "Down"
 
-root.bind("<Key>", change_direction)
+# root.bind("<Key>", change_direction)
 
-draw_snake()
-move()
+# draw_snake()
+# move()
 
-root.mainloop()
+# root.mainloop()
+
+
+
+# lst=[1,3,5,3,2,94,83,82]
+# for i in lst:
+#     if i%2==0:
+#         print(i)
+
+
+
+# n=int(input("star of number"))
+# for i in range(1,n+1):
+#     print(i*"*")
+
+# n=int(input("star of number"))
+# for i in range(n,0,-1):
+#     print(i*"*")
+
+
+# n=int(input("star of number"))
+# for i in range(1,n+1):
+#     print(" "*(n-i) , i*"*")
+
+
+# n=int(input("star of number"))
+# for i in range(n,0,-1):
+#     print(" "*(n-i),i*"*")
+
+# n=int(input("star of number"))
+# for i in range(1,n+1):
+#     print(" "*(n-i) , (2*i-1)*"*")
+# for i in range(n-1,0,-1):
+#     print(" "*(n-i) , (2*i-1)*"*")
+
+
+
+# n=int(input("star of number"))
+# for i in range(1,n+1):
+#     print(i*"*" , end="\t")
+# for i in range(1,n+1):
+#     print(" "*(n-i), i* " *")
+
+
+
+
+# n=int(input(" enter a number :"))
+# for i in range(n,1,-1):
+#     print(" "*(n-i),"* "*i)
+# for i in range(1,n+1):
+#     print(" "*(n-i), "* "*i)
+
+
+
+
+# n=int(input("Enter the number of rows: "))
+# for i in range(1,n+1): 
+#     print(" "*(n-i),"* "*i) 
+# for i in range((n-1),0,-1): 
+#     print(" "*((n-1)-i)," *"*i)
+
+# n=int(input("Enter the number of rows: "))
+# for i in range(1,n+1):
+#     print(i*"* ")
+# for i in range(n-1,0,-1):
+#     print(i* "* ")
+
+
+# n=int(input("Enter the number of rows: "))
+# for i in range(n,0,-1):
+#     print(" "*(n-i), (2*i-1)*"*")
+# for i in range(2,n+1):
+#      print(" "*(n-i), (2*i-1)*"*")
+    
+
+
+
+# n=int(input(" enter a number :"))
+# for i in range(1,n+1):
+#     print(" "*(n-i),"*"*i)
+# for i in range(n,0,-1):
+#     print("*"*i)
+
+
+    
+
+# lst=[5,3,2,1]
+# for i in lst:
+#     print(i*"*")
+# print("ended")
+
+
+
+class car:
+    Brand="BMW"
+    company_city="INDORE"
+
+    def __init__(self,car_name,model,color,fuel_type,car_type):
+        self.car_name=car_name,
+        self.model=model,
+        self.color=color,
+        self.fuel_type=fuel_type,
+        self.car_type=car_type
+    
+    def car_details(self):
+        print(self.car_name)
+        print(self.fuel_type)
+
+cars=car("M5",2025,"black","elc","AMT")
+print(cars.car_details())
+
+
